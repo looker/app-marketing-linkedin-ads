@@ -3,7 +3,7 @@ include: "li_ad_metrics_base.view"
 explore: campaign_stats {
   from: campaign_stats
   view_name: fact
-  hidden: yes
+  hidden: no
   group_label: "LinkedIn Ads"
   label: "Impressions"
   view_label: "Impressions"
