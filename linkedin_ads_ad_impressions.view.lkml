@@ -1,8 +1,6 @@
-
-
 explore: linkedin_ads_ad_impressions {
   persist_with: linkedin_ads_etl_datagroup
-#   hidden: yes
+  hidden: yes
   from: linkedin_ads_ad_impressions
   view_name: fact
 }
@@ -12,7 +10,7 @@ view: linkedin_ads_ad_impressions {
 
   derived_table: {
     datagroup_trigger: linkedin_ads_etl_datagroup
-    explore_source: campaign_stats {
+    explore_source: li_campaign_stats {
       column: _date { field: fact.date_date }
       derived_column: channel { sql: "LinkedIn" ;;}
       column: account_id { field: fact.account_id_string }
