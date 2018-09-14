@@ -1,4 +1,3 @@
-include: "li_ad_metrics_base.view"
 include: "linkedin_ads_ad_impressions.view"
 
 explore: li_period_fact {
@@ -31,7 +30,7 @@ view: li_period_fact {
       column: campaign_name { field: fact.campaign_name }
       column: clicks { field: fact.total_clicks }
       column: conversions { field: fact.total_conversions }
-      #column: conversionvalue { field: fact.conversion_value_in_local_currency }
+      column: conversionvalue { field: fact.total_conversionvalue }
       column: cost { field: fact.total_cost }
       column: impressions { field: fact.total_impressions }
     }
