@@ -40,7 +40,6 @@ view: li_period_fact {
   dimension: key_base {
     hidden: yes
     sql: CONCAT(CAST(${account_id} AS STRING),"-", CAST(${campaign_id} AS STRING));;
-
   }
 
   dimension: primary_key {
