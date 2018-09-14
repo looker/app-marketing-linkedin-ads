@@ -36,7 +36,6 @@ view: li_period_fact {
     }
   }
 
-
   dimension: key_base {
     hidden: yes
     sql: CONCAT(CAST(${account_id} AS STRING),"-", CAST(${campaign_id} AS STRING));;
@@ -62,7 +61,6 @@ view: li_period_fact {
       hidden:  yes
   }
   dimension: _date {
-      type: date_raw
-      convert_tz: no
-    }
+    type: date_raw
+  }
 }
