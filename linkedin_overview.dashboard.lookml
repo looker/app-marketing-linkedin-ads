@@ -2,12 +2,12 @@
   title: LinkedIn Overview
   layout: newspaper
   embed_style:
-  show_title: false
-  show_filters_bar: false
-  background_color: "#ffffff"
-  title_color: "#3a4245"
-  tile_text_color: "#3a4245"
-  text_tile_text_color: ''
+    show_title: false
+    show_filters_bar: false
+    background_color: "#ffffff"
+    title_color: "#3a4245"
+    tile_text_color: "#3a4245"
+    text_tile_text_color: ''
   elements:
   - title: Spend
     name: Spend
@@ -101,7 +101,8 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: last_fact.camapign_name
+      Account: fact.account_name
+      Campaign: fact.campaign_name
     row: 0
     col: 0
     width: 9
@@ -217,7 +218,8 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: last_fact.camapign_name
+      Account: fact.account_name
+      Campaign: fact.campaign_name
     row: 0
     col: 14
     width: 5
@@ -322,7 +324,8 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: last_fact.camapign_name
+      Account: fact.account_name
+      Campaign: fact.campaign_name
     row: 0
     col: 9
     width: 5
@@ -385,7 +388,8 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: last_fact.camapign_name
+      Account: fact.account_name
+      Campaign: fact.campaign_name
     row: 3
     col: 0
     width: 9
@@ -510,7 +514,8 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: last_fact.camapign_name
+      Account: fact.account_name
+      Campaign: fact.campaign_name
     row: 0
     col: 19
     width: 5
@@ -518,7 +523,7 @@
   - title: Conversion Trend
     name: Conversion Trend
     model: marketing_analytics
-    explore: campaign_stats
+    explore: li_campaign_stats
     type: looker_line
     fields:
     - fact.date_date
@@ -570,7 +575,7 @@
       unpinAxis: false
       tickDensity: default
       tickDensityCustom: 5
-      type: log
+      type: linear
     - label:
       orientation: right
       series:
@@ -582,7 +587,7 @@
       unpinAxis: false
       tickDensity: default
       tickDensityCustom: 5
-      type: log
+      type: linear
     - label:
       orientation: right
       series:
@@ -594,7 +599,7 @@
       unpinAxis: false
       tickDensity: default
       tickDensityCustom: 5
-      type: log
+      type: linear
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -626,6 +631,7 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
+      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 3
     col: 9
@@ -634,7 +640,7 @@
   - title: Funnel
     name: Funnel
     model: marketing_analytics
-    explore: campaign_stats
+    explore: li_campaign_stats
     type: looker_column
     fields:
     - fact.total_impressions
@@ -714,6 +720,7 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
+      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 14
     col: 0
@@ -848,7 +855,8 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: last_fact.camapign_name
+      Account: fact.account_name
+      Campaign: fact.campaign_name
     row: 14
     col: 9
     width: 6
@@ -856,33 +864,20 @@
   - title: Click Trend
     name: Click Trend
     model: marketing_analytics
-    explore: campaign_stats
+    explore: li_campaign_stats
     type: looker_line
-    fields:
-    - fact.date_date
-    - fact.average_cost_per_click
-    - fact.total_clicks
-    - fact.average_click_rate
-    fill_fields:
-    - fact.date_date
-    filters: {}
-    sorts:
-    - fact.date_date desc
+    fields: [fact.date_date, fact.average_cost_per_click, fact.average_click_rate, fact.total_clicks]
+    fill_fields: [fact.date_date]
+    filters:
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+      fact.campaign_name: ''
+    sorts: [fact.date_date desc]
     limit: 500
-    query_timezone: America/Los_Angeles
+    column_limit: 50
     stacking: ''
-    colors:
-    - "#d06180"
-    - "#dc9d4f"
-    - "#7869df"
-    - "#6e98f9"
-    - "#8ac8ca"
-    - "#4bb86a"
-    - "#a4a6a9"
-    - "#a6b7ff"
-    - "#afe8fd"
-    - "#ea9895"
-    - "#f1e582"
+    colors: ["#d06180", "#dc9d4f", "#7869df", "#6e98f9", "#8ac8ca", "#4bb86a", "#a4a6a9",
+      "#a6b7ff", "#afe8fd", "#ea9895", "#f1e582"]
     show_value_labels: false
     label_density: 25
     legend_position: center
@@ -893,37 +888,16 @@
     series_colors: {}
     series_types: {}
     limit_displayed_rows: false
-    hidden_series:
-    - fact.total_clicks
-    - fact.average_click_rate
-    y_axes:
-    - label:
-      orientation: left
-      series:
-      - id: fact.average_cost_per_click
-        name: Cost per Click
-        axisId: fact.average_cost_per_click
-      showLabels: true
-      showValues: true
-      unpinAxis: false
-      tickDensity: default
-      tickDensityCustom: 5
-      type: log
-    - label:
-      orientation: right
-      series:
-      - id: fact.average_click_rate
-        name: Click Through Rate
-        axisId: fact.average_click_rate
-      - id: fact.total_clicks
-        name: Clicks
-        axisId: fact.total_clicks
-      showLabels: true
-      showValues: true
-      unpinAxis: false
-      tickDensity: default
-      tickDensityCustom: 5
-      type: log
+    hidden_series: [fact.average_click_rate, fact.total_clicks]
+    y_axes: [{label: !!null '', orientation: left, series: [{id: fact.average_cost_per_click,
+            name: Cost per Click, axisId: fact.average_cost_per_click}], showLabels: true,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear}, {label: !!null '', orientation: right, series: [{id: fact.average_click_rate,
+            name: Click Through Rate, axisId: fact.average_click_rate}], showLabels: true,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear}, {label: !!null '', orientation: right, series: [{id: fact.total_clicks,
+            name: Clicks, axisId: fact.total_clicks}], showLabels: true, showValues: true,
+        unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear}]
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -938,6 +912,7 @@
     plot_size_by_field: false
     show_null_points: true
     interpolation: linear
+    query_timezone: America/Los_Angeles
     ordering: none
     show_null_labels: false
     show_dropoff: true
@@ -955,6 +930,7 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
+      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 14
     col: 15
@@ -1098,7 +1074,8 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: last_fact.camapign_name
+      Account: fact.account_name
+      Campaign: fact.campaign_name
     row: 17
     col: 9
     width: 6
@@ -1106,7 +1083,7 @@
   - title: Campaigns
     name: Campaigns
     model: marketing_analytics
-    explore: campaign_stats
+    explore: li_campaign_stats
     type: table
     fields:
     - fact.campaign_name
@@ -1134,6 +1111,7 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
+      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 20
     col: 0
@@ -1144,8 +1122,8 @@
     title: Period
     type: field_filter
     default_value: 28 day
-    allow_multiple_values: true
-    required: false
+    allow_multiple_values: false
+    required: true
     model: marketing_analytics
     explore: linkedin_ads_ad_impressions
     listens_to_filters: []
@@ -1154,12 +1132,24 @@
     title: Period Latest
     type: field_filter
     default_value: 'Yes'
-    allow_multiple_values: true
-    required: false
+    allow_multiple_values: false
+    required: true
     model: marketing_analytics
     explore: linkedin_ads_ad_impressions
     listens_to_filters: []
     field: fact.date_period_latest
+  - name: Account
+    title: Account
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    model: marketing_analytics
+    explore: li_period_fact
+    listens_to_filters:
+    - Period
+    - Period Latest
+    field: fact.account_name
   - name: Campaign
     title: Campaign
     type: field_filter
@@ -1168,5 +1158,8 @@
     required: false
     model: marketing_analytics
     explore: li_period_fact
-    listens_to_filters: []
-    field: last_fact.camapign_name
+    listens_to_filters:
+    - Period
+    - Period Latest
+    - Account
+    field: fact.campaign_name

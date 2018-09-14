@@ -56,17 +56,12 @@ view: li_period_fact {
   dimension: campaign_id {
     hidden: yes
   }
-  dimension: account_name {
-#     required_fields: [account_id]
-}
-  dimension: camapign_name {
-#     required_fields: [account_id]
-  }
+  dimension: account_name {}
+  dimension: campaign_name {}
   dimension: date_day_of_period {
       hidden:  yes
   }
   dimension: _date {
-      #hidden: yes
       type: date_raw
       convert_tz: no
     }
