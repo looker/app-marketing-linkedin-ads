@@ -868,10 +868,7 @@
     type: looker_line
     fields: [fact.date_date, fact.average_cost_per_click, fact.average_click_rate, fact.total_clicks]
     fill_fields: [fact.date_date]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      fact.campaign_name: ''
+    filters: {}
     sorts: [fact.date_date desc]
     limit: 500
     column_limit: 50
