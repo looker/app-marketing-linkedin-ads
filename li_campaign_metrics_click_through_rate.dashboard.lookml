@@ -24,10 +24,7 @@
     fill_fields:
     - fact.date_date
     filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
       fact.account_name: ''
-      fact.campaign_name: ''
     sorts:
     - fact.date_date desc
     limit: 500
@@ -156,34 +153,34 @@
     col: 0
     width: 24
     height: 13
-    filters:
-    - name: Period
-      title: Period
-      type: field_filter
-      default_value: 28 day
-      allow_multiple_values: true
-      required: false
-      model: marketing_analytics
-      explore: linkedin_ads_ad_impressions
-      listens_to_filters: []
-      field: fact.period
-    - name: Period Latest
-      title: Period Latest
-      type: field_filter
-      default_value: 'Yes'
-      allow_multiple_values: true
-      required: false
-      model: marketing_analytics
-      explore: linkedin_ads_ad_impressions
-      listens_to_filters: []
-      field: fact.date_period_latest
-    - name: Campaign
-      title: Campaign
-      type: field_filter
-      default_value: ''
-      allow_multiple_values: true
-      required: false
-      model: marketing_analytics
-      explore: linkedin_ads_ad_impressions
-      listens_to_filters: []
-      field: fact.campaign_name
+  filters:
+  - name: Period
+    title: Period
+    type: field_filter
+    default_value: 28 day
+    allow_multiple_values: true
+    required: false
+    model: marketing_analytics
+    explore: linkedin_ads_ad_impressions
+    listens_to_filters: []
+    field: fact.period
+  - name: Period Latest
+    title: Period Latest
+    type: field_filter
+    default_value: 'Yes'
+    allow_multiple_values: true
+    required: false
+    model: marketing_analytics
+    explore: linkedin_ads_ad_impressions
+    listens_to_filters: []
+    field: fact.date_period_latest
+  - name: Campaign
+    title: Campaign
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    model: marketing_analytics
+    explore: linkedin_ads_ad_impressions
+    listens_to_filters: []
+    field: fact.campaign_name
