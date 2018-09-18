@@ -1,4 +1,4 @@
-- dashboard: li_campaign_metrics__spend
+- dashboard: li_campaign_metrics_spend
   title: LI Campaign Metrics - Spend
   layout: newspaper
   embed_style:
