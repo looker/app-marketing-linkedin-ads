@@ -143,7 +143,7 @@
     row: 0
     col: 0
     width: 24
-    height: 24
+    height: 15
   filters:
   - name: Period
     title: Period
