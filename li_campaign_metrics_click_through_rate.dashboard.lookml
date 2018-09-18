@@ -1,4 +1,4 @@
-- dashboard: li_campaign_metrics__click_rate
+- dashboard: li_campaign_metrics_through_rate
   title: LI Campaign Metrics - Click Rate
   layout: newspaper
   embed_style:

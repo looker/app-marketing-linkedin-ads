@@ -1,4 +1,4 @@
-- dashboard: li_campaign_metrics__cost_per_click
+- dashboard: li_campaign_metrics_cost_per_click
   title: LI Campaign Metrics - Cost Per Click
   layout: newspaper
   embed_style:

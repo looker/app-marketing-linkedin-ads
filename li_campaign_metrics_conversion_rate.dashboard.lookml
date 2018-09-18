@@ -1,4 +1,4 @@
-- dashboard: li_campaign_metrics__conversion_rate
+- dashboard: li_campaign_metrics_conversion_rate
   title: LI Campaign Metrics - Conversion Rate
   layout: newspaper
   embed_style:

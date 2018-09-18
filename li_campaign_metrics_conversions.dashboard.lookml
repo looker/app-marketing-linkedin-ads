@@ -1,4 +1,4 @@
-- dashboard: li_campaign_metrics__conversions
+- dashboard: li_campaign_metrics_conversions
   title: LI Campaign Metrics - Conversions
   layout: newspaper
   embed_style:

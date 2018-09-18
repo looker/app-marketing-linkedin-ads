@@ -1,4 +1,4 @@
-- dashboard: li_campaign_metrics__cost_per_conversion
+- dashboard: li_campaign_metrics_cost_per_conversion
   title: LI Campaign Metrics - Cost Per Conversion
   layout: newspaper
   embed_style:
