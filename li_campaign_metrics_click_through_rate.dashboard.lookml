@@ -1,4 +1,4 @@
-- dashboard: li_campaign_metrics_through_rate
+- dashboard: li_campaign_metrics_click_through_rate
   title: LI Campaign Metrics - Click Rate
   layout: newspaper
   embed_style:
@@ -152,7 +152,7 @@
     row: 0
     col: 0
     width: 24
-    height: 15
+    height: 12
   filters:
   - name: Period
     title: Period
