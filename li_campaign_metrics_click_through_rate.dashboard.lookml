@@ -1,13 +1,6 @@
 - dashboard: li_campaign_metrics_click_through_rate
   title: LI Campaign Metrics - Click Rate
   layout: newspaper
-  embed_style:
-    show_title: false
-    show_filters_bar: false
-    background_color: "#ffffff"
-    title_color: "#3a4245"
-    tile_text_color: "#3a4245"
-    text_tile_text_color: ''
   elements:
   - title: Click Rate to Date
     name: Click Rate to Date
@@ -23,8 +16,7 @@
     - fact.average_click_rate
     fill_fields:
     - fact.date_date
-    filters:
-      fact.account_name: ''
+    filters: {}
     sorts:
     - fact.date_date desc
     limit: 500
@@ -149,6 +141,7 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 0
     col: 0
     width: 24
@@ -184,3 +177,13 @@
     explore: linkedin_ads_ad_impressions
     listens_to_filters: []
     field: fact.campaign_name
+  - name: Account
+    title: Account
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    model: marketing_analytics
+    explore: linkedin_ads_ad_impressions
+    listens_to_filters: []
+    field: fact.account_name
