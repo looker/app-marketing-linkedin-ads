@@ -1,4 +1,4 @@
-- dashboard: li_campaign_metrics__clicks
+- dashboard: li_campaign_metrics_clicks
   title: LI Campaign Metrics - Clicks
   extends: linkedin_ads_base
   elements:
