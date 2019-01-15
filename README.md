@@ -62,9 +62,9 @@ For example:
 
 marketing_analytics.model.lkml
 ```LookML
-include: "/app-marketing-linkedin-ads-adapter/*.view"
-include: "/app-marketing-linkedin-ads/*.view"
-include: "/app-marketing-linkedin-ads/*.dashboard"
+include: "//app-marketing-linkedin-ads-adapter/*.view"
+include: "//app-marketing-linkedin-ads/*.view"
+include: "//app-marketing-linkedin-ads/*.dashboard"
 ```
 
 
