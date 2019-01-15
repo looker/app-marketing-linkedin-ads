@@ -5,7 +5,7 @@ explore: li_period_fact {
   hidden: yes
   from: li_period_fact
   view_name: fact
-  label: "LinkedIn This Period"
+  label: "LinkedIn Period Comparison"
   view_label: "This Period"
   join: last_fact {
     from: li_period_fact
