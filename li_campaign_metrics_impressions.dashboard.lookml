@@ -1,5 +1,5 @@
 - dashboard: li_campaign_metrics_impressions
-  title: LI Campaign Metrics - Impressions
+  title: LinkedIn Ads - Impressions
   extends: linkedin_ads_base
   elements:
   - title: Impressions To Date

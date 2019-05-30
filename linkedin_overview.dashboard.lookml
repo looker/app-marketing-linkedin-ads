@@ -1,5 +1,5 @@
 - dashboard: linkedin_overview
-  title: LinkedIn Overview
+  title: LinkedIn Ads Overview
   extends: linkedin_ads_base
   elements:
   - title: Spend

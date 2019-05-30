@@ -1,5 +1,5 @@
 - dashboard: li_campaign_metrics_conversions
-  title: LI Campaign Metrics - Conversions
+  title: LinkedIn Ads - Conversions
   layout: newspaper
   extends: linkedin_ads_base
   elements:

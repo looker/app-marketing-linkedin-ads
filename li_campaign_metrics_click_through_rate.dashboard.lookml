@@ -1,5 +1,5 @@
 - dashboard: li_campaign_metrics_click_through_rate
-  title: LI Campaign Metrics - Click Rate
+  title: LinkedIn Ads - Click Rate
   extends: linkedin_ads_base
   elements:
   - title: Click Rate to Date

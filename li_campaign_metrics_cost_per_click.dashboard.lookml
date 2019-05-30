@@ -1,5 +1,5 @@
 - dashboard: li_campaign_metrics_cost_per_click
-  title: LI Campaign Metrics - Cost Per Click
+  title: LinkedIn Ads - Cost Per Click
   extends: linkedin_ads_base
   elements:
   - title: Cost Per Click To Date
