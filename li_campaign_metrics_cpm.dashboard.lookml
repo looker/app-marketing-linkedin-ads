@@ -1,4 +1,5 @@
 - dashboard: li_campaign_metrics_cost_per_impression
+  title: LinkedIn Ads - Cost Per Impression
   extends: linkedin_ads_base
   elements:
   - title: Cost Per Impression To Date

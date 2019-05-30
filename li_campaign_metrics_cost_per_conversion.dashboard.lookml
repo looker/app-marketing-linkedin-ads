@@ -1,5 +1,5 @@
 - dashboard: li_campaign_metrics_cost_per_conversion
-  title: LI Campaign Metrics - Cost Per Conversion
+  title: LinkedIn Ads - Cost Per Conversion
   extends: linkedin_ads_base
   elements:
   - title: Cost Per Conversion To Date

@@ -1,5 +1,5 @@
 - dashboard: li_campaign_metrics_clicks
-  title: LI Campaign Metrics - Clicks
+  title: LinkedIn Ads - Clicks
   extends: linkedin_ads_base
   elements:
   - title: Clicks To Date

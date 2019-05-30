@@ -1,5 +1,5 @@
 - dashboard: li_campaign_metrics_conversion_rate
-  title: LI Campaign Metrics - Conversion Rate
+  title: LinkedIn Ads - Conversion Rate
   extends: linkedin_ads_base
   elements:
   - title: Conversion Rate To Date

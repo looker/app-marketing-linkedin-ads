@@ -1,5 +1,5 @@
 - dashboard: li_campaign_metrics__return_on_ad_spend
-  title: LI Campaign Metrics - Return On Ad Spend
+  title: LinkedIn Ads - Return On Ad Spend
   extends: linkedin_ads_base
   layout: newspaper
   elements:

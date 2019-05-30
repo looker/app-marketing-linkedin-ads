@@ -1,5 +1,5 @@
 - dashboard: li_campaign_metrics_spend
-  title: LI Campaign Metrics - Spend
+  title: LinkedIn Ads - Spend
   extends: linkedin_ads_base
   elements:
   - title: Spend To Date
