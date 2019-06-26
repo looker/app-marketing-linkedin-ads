@@ -132,7 +132,6 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
-      Account: fact.account_name
     row: 0
     col: 0
     width: 24

@@ -94,7 +94,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 0
     col: 0
@@ -211,7 +210,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 0
     col: 14
@@ -317,7 +315,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 0
     col: 9
@@ -381,7 +378,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 3
     col: 0
@@ -507,7 +503,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 0
     col: 19
@@ -624,7 +619,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 3
     col: 9
@@ -713,7 +707,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 14
     col: 0
@@ -848,7 +841,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 14
     col: 9
@@ -920,7 +912,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 14
     col: 15
@@ -1064,7 +1055,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 17
     col: 9
@@ -1101,7 +1091,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 20
     col: 0

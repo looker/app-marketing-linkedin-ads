@@ -1,5 +1,3 @@
-include: "linkedin_ad_metrics_base.view"
-include: "date_fact.view"
 
 explore: linkedin_campaign_date_fact {
   persist_with: linkedin_ads_etl_datagroup
@@ -15,6 +13,7 @@ explore: linkedin_campaign_date_fact {
       ${fact.campaign_id} = ${last_fact.campaign_id} AND
       ${fact.date_last_period} = ${last_fact.date_period} AND
       ${fact.date_day_of_period} = ${last_fact.date_day_of_period} ;;
+    relationship: one_to_one
   }
 }
 
@@ -40,13 +39,13 @@ view: linkedin_campaign_key_base {
 
 view: linkedin_campaign_date_fact {
   extends: [date_base, linkedin_ad_metrics_base, period_base,
-    ad_metrics_period_comparison_base, ad_metrics_weighted_period_comparison_base,
-    ad_metrics_parent_comparison_base, linkedin_campaign_key_base]
+    ad_metrics_period_comparison_base, linkedin_campaign_key_base]
   derived_table: {
     datagroup_trigger: linkedin_ads_etl_datagroup
     explore_source: linkedin_ad_impressions_campaign {
       column: _date { field: fact.date_date }
       column: campaign_id {field: fact.campaign_id}
+      column: campaign_name {field: campaign.name}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
       column: revenue {field: fact.total_conversionvalue}
@@ -56,6 +55,10 @@ view: linkedin_campaign_date_fact {
     }
   }
   dimension: campaign_id {
+    hidden: yes
+  }
+
+  dimension: campaign_name {
     hidden: yes
   }
 
