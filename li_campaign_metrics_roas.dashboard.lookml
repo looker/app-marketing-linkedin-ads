@@ -6,7 +6,7 @@
   - title: Return on Ad Spend to Date
     name: Return on Ad Spend to Date
     model: marketing_analytics
-    explore: li_campaign_stats
+    explore: linkedin_campaign_date_fact
     type: looker_line
     fields:
     - fact.date_date

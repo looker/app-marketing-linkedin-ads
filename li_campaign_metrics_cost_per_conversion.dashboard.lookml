@@ -5,7 +5,7 @@
   - title: Cost Per Conversion To Date
     name: Cost Per Conversion To Date
     model: marketing_analytics
-    explore: li_campaign_stats
+    explore: linkedin_campaign_date_fact
     type: looker_line
     fields:
     - fact.date_date
