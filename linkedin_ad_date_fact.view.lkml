@@ -22,7 +22,7 @@ view: linkedin_ad_key_base {
   extension: required
 
   dimension: ad_key_base {
-    hidden: no
+    hidden: yes
     sql: {% if _dialect._name == 'snowflake' %}
         TO_CHAR(${campaign_id}) || '-' ||  TO_CHAR(${ad_id})
       {% elsif _dialect._name == 'redshift' %}
@@ -45,7 +45,9 @@ view: linkedin_ad_date_fact {
     explore_source: linkedin_ad_impressions_ad {
       column: _date { field: fact.date_date }
       column: ad_id {field: fact.ad_id}
+      column: ad_title {field: ad.title}
       column: campaign_id {field: campaign.id}
+      column: campaign_name {field: campaign.name}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
       column: revenue {field: fact.total_conversionvalue}
@@ -60,6 +62,14 @@ view: linkedin_ad_date_fact {
 
   dimension: campaign_id {
     hidden: yes
+  }
+
+  dimension: campaign_name {
+    hidden: no
+  }
+
+  dimension: ad_title {
+    hidden: no
   }
 
   dimension: cost {

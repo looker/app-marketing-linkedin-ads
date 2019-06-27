@@ -32,7 +32,7 @@ view: linkedin_campaign_key_base {
       {% endif %} ;;
   }
   dimension: key_base {
-    hidden: no
+    hidden: yes
     sql: ${campaign_key_base} ;;
   }
 }
@@ -59,7 +59,7 @@ view: linkedin_campaign_date_fact {
   }
 
   dimension: campaign_name {
-    hidden: yes
+    hidden: no
   }
 
   dimension: cost {

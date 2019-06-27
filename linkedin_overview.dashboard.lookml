@@ -511,7 +511,7 @@
   - title: Conversion Trend
     name: Conversion Trend
     model: marketing_analytics
-    explore: linkedin_campaign_date_fact
+    explore: linkedin_ad_date_fact
     type: looker_line
     fields:
     - fact.date_date
@@ -627,7 +627,7 @@
   - title: Funnel
     name: Funnel
     model: marketing_analytics
-    explore: linkedin_campaign_date_fact
+    explore: linkedin_ad_date_fact
     type: looker_column
     fields:
     - fact.total_impressions
@@ -849,7 +849,7 @@
   - title: Click Trend
     name: Click Trend
     model: marketing_analytics
-    explore: linkedin_campaign_date_fact
+    explore: linkedin_ad_date_fact
     type: looker_line
     fields: [fact.date_date, fact.average_cost_per_click, fact.average_click_rate, fact.total_clicks]
     fill_fields: [fact.date_date]
@@ -1063,7 +1063,7 @@
   - title: Campaigns
     name: Campaigns
     model: marketing_analytics
-    explore: linkedin_campaign_date_fact
+    explore: linkedin_ad_date_fact
     type: table
     fields:
     - fact.campaign_name
