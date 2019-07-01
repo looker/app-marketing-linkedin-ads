@@ -48,6 +48,7 @@ view: linkedin_ad_date_fact {
       column: ad_title {field: ad.title}
       column: campaign_id {field: campaign.id}
       column: campaign_name {field: campaign.name}
+      column: bid_type {field: campaign.cost_type}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
       column: revenue {field: fact.total_conversionvalue}
@@ -65,11 +66,12 @@ view: linkedin_ad_date_fact {
   }
 
   dimension: campaign_name {
-    hidden: no
   }
 
   dimension: ad_title {
-    hidden: no
+  }
+
+  dimension: bid_type {
   }
 
   dimension: cost {
