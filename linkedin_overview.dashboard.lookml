@@ -94,7 +94,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 0
     col: 0
@@ -211,7 +210,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 0
     col: 14
@@ -317,7 +315,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 0
     col: 9
@@ -381,7 +378,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 3
     col: 0
@@ -507,7 +503,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 0
     col: 19
@@ -516,7 +511,7 @@
   - title: Conversion Trend
     name: Conversion Trend
     model: marketing_analytics
-    explore: li_campaign_stats
+    explore: linkedin_ad_date_fact
     type: looker_line
     fields:
     - fact.date_date
@@ -624,7 +619,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 3
     col: 9
@@ -633,7 +627,7 @@
   - title: Funnel
     name: Funnel
     model: marketing_analytics
-    explore: li_campaign_stats
+    explore: linkedin_ad_date_fact
     type: looker_column
     fields:
     - fact.total_impressions
@@ -713,7 +707,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 14
     col: 0
@@ -848,7 +841,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 14
     col: 9
@@ -857,7 +849,7 @@
   - title: Click Trend
     name: Click Trend
     model: marketing_analytics
-    explore: li_campaign_stats
+    explore: linkedin_ad_date_fact
     type: looker_line
     fields: [fact.date_date, fact.average_cost_per_click, fact.average_click_rate, fact.total_clicks]
     fill_fields: [fact.date_date]
@@ -920,7 +912,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 14
     col: 15
@@ -1064,7 +1055,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 17
     col: 9
@@ -1073,7 +1063,7 @@
   - title: Campaigns
     name: Campaigns
     model: marketing_analytics
-    explore: li_campaign_stats
+    explore: linkedin_ad_date_fact
     type: table
     fields:
     - fact.campaign_name
@@ -1101,7 +1091,6 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Account: fact.account_name
       Campaign: fact.campaign_name
     row: 20
     col: 0
