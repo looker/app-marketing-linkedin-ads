@@ -45,7 +45,7 @@ view: li_period_fact {
     primary_key: yes
     hidden: yes
     sql: CONCAT(CAST(${date_period} AS STRING)
-              , "|", ${date_day_of_period},
+              , "|", ${date_day_of_period}
               , "|", ${key_base}
             ) ;;
   }
