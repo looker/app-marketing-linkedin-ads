@@ -5,7 +5,7 @@
   - title: Spend
     name: Spend
     model: marketing_analytics
-    explore: li_period_fact
+    explore: linkedin_ad_date_fact
     type: single_value
     fields:
     - fact.average_cost_per_click
@@ -102,7 +102,7 @@
   - title: Cost Per Conversion
     name: Cost Per Conversion
     model: marketing_analytics
-    explore: li_period_fact
+    explore: linkedin_ad_date_fact
     type: single_value
     fields:
     - fact.average_cost_per_click
@@ -218,7 +218,7 @@
   - title: Conversions
     name: Conversions
     model: marketing_analytics
-    explore: li_period_fact
+    explore: linkedin_ad_date_fact
     type: single_value
     fields:
     - fact.average_cost_per_click
@@ -323,7 +323,7 @@
   - title: Spend To Date
     name: Spend To Date
     model: marketing_analytics
-    explore: li_period_fact
+    explore: linkedin_ad_date_fact
     type: looker_area
     fields:
     - last_fact.cumulative_spend
@@ -386,7 +386,7 @@
   - title: Conversion Rate
     name: Conversion Rate
     model: marketing_analytics
-    explore: li_period_fact
+    explore: linkedin_ad_date_fact
     type: single_value
     fields:
     - fact.average_cost_per_click
@@ -715,7 +715,7 @@
   - title: Click Rate
     name: Click Rate
     model: marketing_analytics
-    explore: li_period_fact
+    explore: linkedin_ad_date_fact
     type: single_value
     fields:
     - fact.average_cost_per_click
@@ -920,7 +920,7 @@
   - title: Cost Per Click
     name: Cost Per Click
     model: marketing_analytics
-    explore: li_period_fact
+    explore: linkedin_ad_date_fact
     type: single_value
     fields:
     - fact.average_cost_per_click
