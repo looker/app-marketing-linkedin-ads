@@ -12,8 +12,8 @@ view: linkedin_ads_ad_impressions {
     datagroup_trigger: linkedin_ads_etl_datagroup
     explore_source: linkedin_ad_impressions_campaign {
       column: _date { field: fact.date_date }
+      column: account_id { field: campaign.account_id}
       derived_column: channel { sql: "LinkedIn" ;;}
-      derived_column: account_id { sql: CAST(NULL AS STRING);; }
       derived_column: account_name {  sql: CAST(NULL AS STRING);;  }
       column: campaign_id { field: fact.campaign_id_string }
       column: campaign_name { field: campaign.name }
