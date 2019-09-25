@@ -44,6 +44,7 @@ view: linkedin_ads_ad_impressions {
   dimension: channel {}
   dimension: account_id {
     hidden: yes
+    sql: CAST(${TABLE}.account_id AS STRING);;
   }
   dimension: campaign_id {
     hidden: yes
