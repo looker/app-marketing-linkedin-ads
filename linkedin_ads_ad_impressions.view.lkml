@@ -12,7 +12,7 @@ view: linkedin_ads_ad_impressions {
     datagroup_trigger: linkedin_ads_etl_datagroup
     explore_source: linkedin_ad_impressions_campaign {
       column: _date { field: fact.date_date }
-      column: account_id { field: campaign.account_id}
+      column: account_id { field: campaign.account_id_string}
       derived_column: channel { sql: "LinkedIn" ;;}
       derived_column: account_name {  sql: CAST(NULL AS STRING);;  }
       column: campaign_id { field: fact.campaign_id_string }
@@ -44,7 +44,6 @@ view: linkedin_ads_ad_impressions {
   dimension: channel {}
   dimension: account_id {
     hidden: yes
-    sql: CAST(${TABLE}.account_id AS STRING);;
   }
   dimension: campaign_id {
     hidden: yes
