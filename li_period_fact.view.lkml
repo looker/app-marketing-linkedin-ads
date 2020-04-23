@@ -3,6 +3,7 @@ include: "linkedin_ads_ad_impressions.view"
 explore: li_period_fact {
   persist_with: linkedin_ads_etl_datagroup
   from: li_period_fact
+  extension: required
   view_name: fact
   label: "LinkedIn Period Comparison"
   view_label: "This Period"
