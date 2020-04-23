@@ -3,7 +3,7 @@ explore: linkedin_ad_date_fact {
   persist_with: linkedin_ads_etl_datagroup
   from: linkedin_ad_date_fact
   view_name: fact
-  label: "Ad This Period"
+  label: "LinkedIn Ad This Period"
   view_label: "Ad This Period"
 
   join: last_fact {

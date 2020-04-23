@@ -8,7 +8,7 @@ explore: linkedin_ad_impressions_campaign_template {
   extends: [linkedin_ad_impressions_campaign_adapter]
   from: linkedin_ad_impressions_campaign
   view_name: fact
-  group_label: "LinkedIn Ads"
+  group_label: "Marketing Analytics"
   label: "LinkedIn Ads Impressions by Campaign"
   view_label: "Impressions by Campaign"
 }
@@ -24,7 +24,7 @@ explore: linkedin_ad_impressions_ad_template {
   from: linkedin_ad_impressions_ad
   extension: required
   view_name: fact
-  group_label: "LinkedIn Ads"
+  group_label: "Marketing Analytics"
   label: "LinkedIn Ads Impressions by Ad"
   view_label: "Impressions by Ad"
 }
