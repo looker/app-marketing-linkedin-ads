@@ -5,7 +5,7 @@ explore: linkedin_campaign_date_fact {
   view_name: fact
   label: "LinkedIn Campaign This Period"
   view_label: "Campaign This Period"
-
+  hidden: yes
   join: last_fact {
     from: linkedin_campaign_date_fact
     view_label: "Campaign Prior Period"

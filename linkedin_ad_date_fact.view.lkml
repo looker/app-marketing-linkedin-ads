@@ -5,7 +5,7 @@ explore: linkedin_ad_date_fact {
   view_name: fact
   label: "LinkedIn Ad This Period"
   view_label: "Ad This Period"
-
+  hidden: yes
   join: last_fact {
     from: linkedin_ad_date_fact
     view_label: "Ad Prior Period"
